@@ -1,0 +1,129 @@
+mlruns
+├── 0
+│   └── meta.yaml
+├── 1
+│   ├── 4064890bc4de4842b47979f545791a12
+│   │   ├── artifacts
+│   │   │   ├── acc.png
+│   │   │   ├── log.csv
+│   │   │   ├── loss.png
+│   │   │   └── models
+│   │   │       ├── MLmodel
+│   │   │       ├── conda.yaml
+│   │   │       └── data
+│   │   │           ├── keras_module.txt
+│   │   │           └── model.h5
+│   │   ├── meta.yaml
+│   │   ├── metrics
+│   │   │   ├── test_acc
+│   │   │   ├── test_f1
+│   │   │   ├── test_presicion
+│   │   │   ├── test_recall
+│   │   │   ├── val_acc
+│   │   │   ├── val_f1
+│   │   │   ├── val_precision
+│   │   │   └── val_recall
+│   │   ├── params
+│   │   │   ├── batch_size
+│   │   │   ├── epoch_num
+│   │   │   └── learning_rate
+│   │   └── tags
+│   │       ├── mlflow.source.git.commit
+│   │       ├── mlflow.source.name
+│   │       ├── mlflow.source.type
+│   │       └── mlflow.user
+│   ├── 8d7012908ea34ab98f050b8eb7831460
+│   │   ├── artifacts
+│   │   │   ├── acc.png
+│   │   │   ├── log.csv
+│   │   │   ├── loss.png
+│   │   │   └── models
+│   │   │       ├── MLmodel
+│   │   │       ├── conda.yaml
+│   │   │       └── data
+│   │   │           ├── keras_module.txt
+│   │   │           └── model.h5
+│   │   ├── meta.yaml
+│   │   ├── metrics
+│   │   │   ├── test_acc
+│   │   │   ├── test_f1
+│   │   │   ├── test_presicion
+│   │   │   ├── test_recall
+│   │   │   ├── val_acc
+│   │   │   ├── val_f1
+│   │   │   ├── val_precision
+│   │   │   └── val_recall
+│   │   ├── params
+│   │   │   ├── batch_size
+│   │   │   ├── epoch_num
+│   │   │   └── learning_rate
+│   │   └── tags
+│   │       ├── mlflow.source.git.commit
+│   │       ├── mlflow.source.name
+│   │       ├── mlflow.source.type
+│   │       └── mlflow.user
+│   └── meta.yaml
+└── 2
+    ├── 2d4b9e47535c43a6829d2d4951df8089
+    │   ├── artifacts
+    │   │   ├── acc.png
+    │   │   ├── log.csv
+    │   │   ├── loss.png
+    │   │   └── models
+    │   │       ├── MLmodel
+    │   │       ├── conda.yaml
+    │   │       └── data
+    │   │           ├── keras_module.txt
+    │   │           └── model.h5
+    │   ├── meta.yaml
+    │   ├── metrics
+    │   │   ├── test_acc
+    │   │   ├── test_f1
+    │   │   ├── test_presicion
+    │   │   ├── test_recall
+    │   │   ├── val_acc
+    │   │   ├── val_f1
+    │   │   ├── val_precision
+    │   │   └── val_recall
+    │   ├── params
+    │   │   ├── batch_size
+    │   │   ├── epoch_num
+    │   │   └── learning_rate
+    │   └── tags
+    │       ├── mlflow.source.git.commit
+    │       ├── mlflow.source.name
+    │       ├── mlflow.source.type
+    │       └── mlflow.user
+    ├── 49ff0d1eef1647489367eb08a904dec3
+    │   ├── artifacts
+    │   │   ├── acc.png
+    │   │   ├── log.csv
+    │   │   ├── loss.png
+    │   │   └── models
+    │   │       ├── MLmodel
+    │   │       ├── conda.yaml
+    │   │       └── data
+    │   │           ├── keras_module.txt
+    │   │           └── model.h5
+    │   ├── meta.yaml
+    │   ├── metrics
+    │   │   ├── test_acc
+    │   │   ├── test_f1
+    │   │   ├── test_presicion
+    │   │   ├── test_recall
+    │   │   ├── val_acc
+    │   │   ├── val_f1
+    │   │   ├── val_precision
+    │   │   └── val_recall
+    │   ├── params
+    │   │   ├── batch_size
+    │   │   ├── epoch_num
+    │   │   └── learning_rate
+    │   └── tags
+    │       ├── mlflow.source.git.commit
+    │       ├── mlflow.source.name
+    │       ├── mlflow.source.type
+    │       └── mlflow.user
+    └── meta.yaml
+
+31 directories, 95 files
