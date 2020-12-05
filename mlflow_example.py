@@ -2,10 +2,12 @@
 
 import os
 import argparse
+from typing import Tuple
 import numpy as np
 import mlflow
 import mlflow.keras
 import matplotlib.pyplot as plt
+import keras
 from keras.datasets import mnist, fashion_mnist
 from keras.utils import to_categorical
 from keras.models import Sequential
@@ -32,7 +34,7 @@ parser.add_argument('-b', type=int,
 args = parser.parse_args()
 
 
-def get_datasets():
+def get_datasets() -> Tuple[Tuple[np.array, np.array], Tuple[np.array, np.array], Tuple[np.array, np.array]]:
     """データセットを取得する
 
     Returns:
@@ -65,7 +67,7 @@ def get_datasets():
     return (x_train, y_train), (x_val, y_val), (x_test, y_test)
 
 
-def build_fully_model(input_num, output_class_num, weight_path=None):
+def build_fully_model(input_num: int, output_class_num: int, weight_path: str = None) -> keras.Model:
     """全結合モデルを作成する
 
     Arguments:
@@ -93,7 +95,8 @@ def build_fully_model(input_num, output_class_num, weight_path=None):
     return model
 
 
-def build_cnn_model(width, height, ch, output_class_num, weight_path=None):
+def build_cnn_model(
+    width: int, height: int, ch: int, output_class_num: int, weight_path: str = None) -> keras.Model:
     """CNNモデルを作成する
 
     Arguments:
@@ -130,7 +133,7 @@ def build_cnn_model(width, height, ch, output_class_num, weight_path=None):
     return model
 
 
-def calc_metrics(model, X, Y):
+def calc_metrics(model: keras.Model, X: np.array, Y: np.array) -> Tuple[float, float, float, float]:
     """メトリクスを計算する
 
     Arguments:
@@ -157,7 +160,7 @@ def calc_metrics(model, X, Y):
     return acc, prec, recall, f1
 
 
-def plot_history(history, output_dir="./outputs/"):
+def plot_history(history: keras.History , output_dir: str = "./outputs/") -> None:
     """与えられた学習履歴からacc, lossの推移をプロットする
 
     Arguments:
@@ -185,7 +188,7 @@ def plot_history(history, output_dir="./outputs/"):
     plt.savefig(output_dir + "loss.png")
 
 
-def main():
+def main() -> None:
     """処理を管理する
     """
 
@@ -236,11 +239,9 @@ def main():
 
         # 学習済みモデルを読み込む
         if args.model == 'fully':
-            model = build_fully_model(
-                reshape_num, class_num, weight_path=model_path)
+            model = build_fully_model(reshape_num, class_num, weight_path=model_path)
         elif args.model == 'cnn':
-            model = build_cnn_model(
-                width, height, ch, class_num, weight_path=model_path)
+            model = build_cnn_model(width, height, ch, class_num, weight_path=model_path)
 
         # メトリクスを計算
         val_acc, val_prec, val_recall, val_f1 = calc_metrics(
